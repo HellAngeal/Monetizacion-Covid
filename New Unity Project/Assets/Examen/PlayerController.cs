@@ -1,58 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 using UnityEngine.UI;
 
-public class PlayerController : NetworkBehaviour
+public class PlayerController : MonoBehaviour
 {
-    GameObject GameManagerGO;
+    public GameObject GameManagerGO;
 
     public float speed;
     public GameObject bulletPosition1;
     public GameObject bulletPosition2;
-    public GameObject bullet01;
-    public GameObject bullet02;
     public GameObject explosionGO;
-
-    public GameObject LivesUIText;
+    public GameObject PlayerBulletGO;
     
-    public int MaxLives = 5;
+    public int MaxLives;
 
-    GameManager GM;
-
-    Text Livestext;
+    public Text Livestext;
 
     int lives;
-    // Start is called before the first frame update
-    public void Start()
+
+    void Init()
     {
         lives = MaxLives;
 
         Livestext.text = lives.ToString();
+
+        gameObject.SetActive(true);
     }
 
-    public void Awake()
+    // Start is called before the first frame update
+    public void Start()
     {
-        GameManagerGO = GameObject.Find("GameManagerGO");
-        GM=GameManagerGO.GetComponent<GameManager>();
-
-        LivesUIText = GameObject.Find("CanvasGO");
-        Livestext = LivesUIText.GetComponentInChildren<Text>();
-
-        GM.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.Gameplay);
+        Init();
     }
     // Update is called once per frame
     void Update()
     {
-        if (isLocalPlayer)
-        {
-            Move();
-            if (Input.GetKeyDown("space"))
-            {
-                Shoot();
-            }
-        }
+        Move();
+        Shoot();
     }
 
     void Move()
@@ -82,68 +67,36 @@ public class PlayerController : NetworkBehaviour
     }
     void Shoot()
     {
-        Cmd_Shoot();
+        if (Input.GetKeyDown("space"))
+        {
+            GameObject bullet01 = (GameObject)Instantiate(PlayerBulletGO);
+            bullet01.transform.position = bulletPosition1.transform.position;
+
+            GameObject bullet02 = (GameObject)Instantiate(PlayerBulletGO);
+            bullet02.transform.position = bulletPosition2.transform.position;
+        }
     }
-    [Command]
-    void Cmd_Shoot()
-    {
-        gameObject.GetComponent<AudioSource>().Play();
-
-        GameObject bala1 = NetworkManager.Instantiate(bullet01);
-        bullet01.transform.position = bulletPosition1.transform.position;
-        NetworkServer.Spawn(bala1);
-
-        GameObject bala2 = NetworkManager.Instantiate(bullet02);
-        bullet02.transform.position = bulletPosition2.transform.position;
-        NetworkServer.Spawn(bala2);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.tag == "Enemy") || (collision.tag == "EnemyBullet"))
         {
-            PlayerExplosion();
+            PlayExplosion();
 
-            UpdateLifes();
+            lives--;
+            Livestext.text = lives.ToString();
 
-            if (lives <= 0)
+            if (lives == 0)
             {
-                GM.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+                GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+
+                gameObject.SetActive(false);
             }
-        }
+        }    
     }
-
-    void PlayerExplosion()
+    void PlayExplosion()
     {
-        Rpc_PlayerExplosion();
-    }
+        GameObject explosion = (GameObject)Instantiate(explosionGO);
 
-    void Rpc_PlayerExplosion()
-    {
-        Cmd_PlayerExplosion();
-    }
-
-    [Command]
-    void Cmd_PlayerExplosion()
-    {
-        GameObject explosion = NetworkManager.Instantiate(explosionGO);
         explosion.transform.position = transform.position;
-        NetworkServer.Spawn(explosion);
-    }
-
-    void UpdateLifes()
-    {
-        Rpc_UpdateLifes();
-    }
-
-    void Rpc_UpdateLifes()
-    {
-        Cmd_UpdateLifes();
-    }
-
-    void Cmd_UpdateLifes()
-    {
-        lives--;
-        Livestext.text = lives.ToString();
     }
 }

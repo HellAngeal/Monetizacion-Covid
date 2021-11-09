@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class EnemyController : NetworkBehaviour
+public class EnemyController : MonoBehaviour
 {
     GameObject scoreUITextGO;
 
@@ -53,8 +52,7 @@ public class EnemyController : NetworkBehaviour
 
     void EnemyExplosion()
     {
-        GameObject explosion = NetworkManager.Instantiate(explosionGO);
+        GameObject explosion = Instantiate(explosionGO);
         explosion.transform.position = transform.position;
-        NetworkServer.Spawn(explosion);
     }
 }

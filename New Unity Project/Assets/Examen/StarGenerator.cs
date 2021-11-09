@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class StarGenerator : NetworkBehaviour
+public class StarGenerator : MonoBehaviour
 {
     public GameObject StarGO;
     public int MaxStars;
@@ -24,12 +23,12 @@ public class StarGenerator : NetworkBehaviour
 
         for(int i=0; i < MaxStars; ++i)
         {
-            GameObject star = NetworkManager.Instantiate(StarGO);
+            GameObject star = Instantiate(StarGO);
 
             star.GetComponent<SpriteRenderer>().color = starColors[i % starColors.Length];
             
             star.transform.position = new Vector2(Random.Range(min.x, max.x),Random.Range(min.y,max.y));
-            NetworkServer.Spawn(star);
+            //NetworkServer.Spawn(star);
 
             star.GetComponent<Star>().speed = -(1f * Random.value + 0.5f);
 

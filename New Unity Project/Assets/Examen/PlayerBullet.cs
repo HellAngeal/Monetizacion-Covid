@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class PlayerBullet : NetworkBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     float speed;
     // Start is called before the first frame update

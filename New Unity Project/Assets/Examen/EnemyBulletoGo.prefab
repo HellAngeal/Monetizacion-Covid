@@ -10,11 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3337264393090184597}
   - component: {fileID: 3337264393090184596}
-  - component: {fileID: 3337264393090184599}
-  - component: {fileID: 2219233502112829342}
-  - component: {fileID: 3519514501989512364}
   - component: {fileID: 858166759284545784}
   - component: {fileID: 1713434880247698861}
+  - component: {fileID: 5693832752092196047}
   m_Layer: 0
   m_Name: EnemyBulletoGo
   m_TagString: EnemyBullet
@@ -73,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -693594391
+  m_SortingLayerID: 694825095
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1115682805434658061, guid: 842e685e850a66146b394bcbf8d76b20, type: 3}
@@ -87,52 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3337264393090184599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3337264393090184592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e730183e058b1249874b786f5fe822b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2219233502112829342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3337264393090184592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!114 &3519514501989512364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3337264393090184592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
 --- !u!61 &858166759284545784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5693832752092196047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3337264393090184592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e730183e058b1249874b786f5fe822b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

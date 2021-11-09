@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class EnemyGun : NetworkBehaviour
+public class EnemyGun : MonoBehaviour
 {
     public GameObject EnemyBulletGO;
     // Start is called before the first frame update
@@ -24,9 +23,8 @@ public class EnemyGun : NetworkBehaviour
 
         if (playerShip != null)
         {
-            GameObject BalaE = NetworkManager.Instantiate(EnemyBulletGO);
+            GameObject BalaE = Instantiate(EnemyBulletGO);
             BalaE.transform.position = transform.position;
-            NetworkServer.Spawn(BalaE);
 
             Vector2 direction = playerShip.transform.position - BalaE.transform.position;
 

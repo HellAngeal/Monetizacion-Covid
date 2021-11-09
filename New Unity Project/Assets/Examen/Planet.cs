@@ -29,9 +29,11 @@ public class Planet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isMoving)       
+        if (!isMoving)
+        {
             return;
-        
+        }
+
         Vector2 position = transform.position;
 
         position = new Vector2(position.x, position.y + speed * Time.deltaTime);

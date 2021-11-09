@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 2491278070424737221}
   - component: {fileID: 384001026955328616}
   - component: {fileID: 8163103702449964352}
-  - component: {fileID: 1398331952}
-  - component: {fileID: 8874329812416162717}
   m_Layer: 0
   m_Name: PinkPlanetGO
   m_TagString: Untagged
@@ -71,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1947718531
+  m_SortingLayerID: 326239445
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c85e466d09809764ea187f6f15faf5cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,39 +95,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbe9042e0c52c440aba0a86260c2d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1
-  isMoving: 0
---- !u!114 &1398331952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149761980110432300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!114 &8874329812416162717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149761980110432300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
+  speed: -0.4
+  isMoving: 1

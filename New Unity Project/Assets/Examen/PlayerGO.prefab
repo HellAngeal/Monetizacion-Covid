@@ -72,13 +72,9 @@ GameObject:
   - component: {fileID: 7097802707153904229}
   - component: {fileID: 7097802707153904230}
   - component: {fileID: 7097802707153904227}
-  - component: {fileID: 2041387741834753560}
-  - component: {fileID: 5489578291305506736}
-  - component: {fileID: 5501084278387688909}
   - component: {fileID: 4442925745966259615}
   - component: {fileID: 1876141391365855532}
   - component: {fileID: 2364416652442742612}
-  - component: {fileID: 6524765788535379411}
   m_Layer: 0
   m_Name: PlayerGO
   m_TagString: Player
@@ -139,7 +135,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -693594391
+  m_SortingLayerID: 694825095
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -9062304531134733656, guid: 19feb8098cd62934bb249465c53e1e5f, type: 3}
@@ -165,16 +161,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f14b3ec3cbb80640954439ce57d8da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
+  GameManagerGO: {fileID: 0}
   speed: 3
   bulletPosition1: {fileID: 4919794359224724449}
   bulletPosition2: {fileID: 2850667568294376739}
-  bullet01: {fileID: 8412670752929048543, guid: 6ceee35ee4faa7b4caa3d0ef0febfc10, type: 3}
-  bullet02: {fileID: 8412670752929048543, guid: 6ceee35ee4faa7b4caa3d0ef0febfc10, type: 3}
   explosionGO: {fileID: 5045865595636316302, guid: 4ff9123c571fc754b9b9585a815ba312, type: 3}
-  LivesUIText: {fileID: 7345046808204927024, guid: 1b45c5c7acf3f324a9883ce59d9f6a6a, type: 3}
+  PlayerBulletGO: {fileID: 8412670752929048543, guid: 6ceee35ee4faa7b4caa3d0ef0febfc10, type: 3}
   MaxLives: 5
+  Livestext: {fileID: 0}
 --- !u!95 &7097802707153904227
 Animator:
   serializedVersion: 3
@@ -194,56 +188,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2041387741834753560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7097802707153904231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!114 &5489578291305506736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7097802707153904231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
---- !u!114 &5501084278387688909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7097802707153904231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  animator: {fileID: 7097802707153904227}
 --- !u!61 &4442925745966259615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -387,18 +331,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6524765788535379411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7097802707153904231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c598380f54589c34090ce172e25ec043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  shieldGO: {fileID: 1114092382424269466, guid: a4b34b084dd71b34e8e9353e97bc0edf, type: 3}

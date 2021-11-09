@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class EnemySpawner : NetworkBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     public GameObject EnemyGO;
 
@@ -11,12 +10,9 @@ public class EnemySpawner : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (isServer) 
-        { 
             Invoke("SpawnEnemy", maxSpawnRate);
 
-            InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
-        }
+            InvokeRepeating("IncreaseSpawnRate", 0f, 30f);    
     }
 
     // Update is called once per frame
@@ -30,9 +26,8 @@ public class EnemySpawner : NetworkBehaviour
 
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        GameObject Enemy = NetworkManager.Instantiate(EnemyGO);
+        GameObject Enemy = Instantiate(EnemyGO);
         Enemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
-        NetworkServer.Spawn(Enemy);
 
         ScheduleNextEnemySpawn();
     }

@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 5045865595636316300}
   - component: {fileID: 5045865595636316303}
   - component: {fileID: 5045865595636316290}
-  - component: {fileID: 1570534112349680080}
-  - component: {fileID: 2631562396178908896}
   - component: {fileID: 7934680954478422047}
   m_Layer: 0
   m_Name: ExplosionGO
@@ -73,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 242783101
+  m_SortingLayerID: -773518423
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -8092295105046505211, guid: cd038ff556ceb9345ac78d162bbc432a, type: 3}
@@ -118,38 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a8fb4444b207048a6a0700cd128548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1570534112349680080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5045865595636316302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!114 &2631562396178908896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5045865595636316302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  animator: {fileID: 5045865595636316303}
 --- !u!82 &7934680954478422047
 AudioSource:
   m_ObjectHideFlags: 0
