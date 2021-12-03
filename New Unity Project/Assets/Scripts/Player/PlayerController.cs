@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
 
     public int AttackLevel=1;
     public int UniqueLevel=0;
+
+    Touch touch;
+
+    float accelStartY;
     void Init()
     {
         lives = MaxLives;
@@ -33,6 +37,7 @@ public class PlayerController : MonoBehaviour
         Livestext.text = lives.ToString();
 
         gameObject.SetActive(true);
+        accelStartY = Input.acceleration.y;
     }
 
     // Start is called before the first frame update
@@ -44,15 +49,33 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        Shoot();
+        if (Input.touchCount>0)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                Shoot();
+            }
+        }
     }
 
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        //Mobile
+        float x = Input.acceleration.x;
+        float y = Input.acceleration.y - accelStartY;
 
-        Vector2 direction = new Vector2(x, y).normalized;
+        Vector2 direction = new Vector2(x, y);
+
+        if (direction.sqrMagnitude > 1)
+        {
+            direction.Normalize();
+        }
+
+        //PC
+        //float x = Input.GetAxisRaw("Horizontal");
+        //float y = Input.GetAxisRaw("Vertical");
+
+        //Vector2 direction = new Vector2(x, y).normalized;
 
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
