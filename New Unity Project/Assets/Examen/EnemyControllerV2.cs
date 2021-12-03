@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyControllerV2 : MonoBehaviour
 {
     GameObject scoreUITextGO;
     public GameObject PowerUpGO;
     public GameObject explosionGO;
+    int hp=5;
     float speed;
     // Start is called before the first frame update
     void Start()
     {
-        speed = 2f;
+        speed = 1.5f;
 
         scoreUITextGO = GameObject.FindGameObjectWithTag("Score");
     }
@@ -40,11 +41,15 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.tag == "Player") || (collision.tag == "PlayerBullet"))
+        if((collision.tag == "PlayerBullet") && hp > 0)
+        {
+            hp -= 1;
+        }
+        else if ((collision.tag == "Player") || (collision.tag == "PlayerBullet")&&hp==0)
         {
             EnemyExplosion();
 
-            scoreUITextGO.GetComponent<GameScore>().Score += 10;
+            scoreUITextGO.GetComponent<GameScore>().Score += 50;
 
             SpawnPowerUp();
             Destroy(gameObject);
