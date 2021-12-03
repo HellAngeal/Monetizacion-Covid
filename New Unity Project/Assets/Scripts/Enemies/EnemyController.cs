@@ -47,7 +47,7 @@ public class EnemyController : MonoBehaviour
             PupR = Random.Range(0, 2);
 
             EnemyExplosion();
-            Debug.Log(PupR);
+
             scoreUITextGO.GetComponent<GameScore>().Score += 10;
 
             if (PupR == 0)
