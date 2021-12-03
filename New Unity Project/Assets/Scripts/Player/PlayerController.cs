@@ -155,6 +155,7 @@ public class PlayerController : MonoBehaviour
             lives--;
             Livestext.text = lives.ToString();
             AttackLevel = 1;
+            UniqueLevel = 0;
             if (lives == 0)
             {
                 GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
