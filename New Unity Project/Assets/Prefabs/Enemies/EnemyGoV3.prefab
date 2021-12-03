@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 694825095
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8868581108171312049, guid: 19feb8098cd62934bb249465c53e1e5f, type: 3}
   m_Color: {r: 0.6156831, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PowerUpGO: {fileID: 6158287339389345738, guid: f9614131deefbe54e88f57f652af4849, type: 3}
+  UniqueAugmentGO: {fileID: 0}
   explosionGO: {fileID: 5045865595636316302, guid: 4ff9123c571fc754b9b9585a815ba312, type: 3}
 --- !u!1 &4782257986375527315
 GameObject:

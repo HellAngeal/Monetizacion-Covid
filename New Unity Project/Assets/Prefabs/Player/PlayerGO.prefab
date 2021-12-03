@@ -200,7 +200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 694825095
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -9062304531134733656, guid: 19feb8098cd62934bb249465c53e1e5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -238,6 +238,7 @@ MonoBehaviour:
   MaxLives: 5
   Livestext: {fileID: 0}
   AttackLevel: 1
+  UniqueLevel: 0
 --- !u!95 &7097802707153904227
 Animator:
   serializedVersion: 3
