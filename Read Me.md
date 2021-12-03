@@ -53,10 +53,12 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 ## Como se realizo ⚙️
 
 Se utilizo Unity como motor de juego para la creación de los scripts e incorporacion de animaciones, necesarias para que el juego pudiese funcionar de manera correcta.
+
 ![Screenshot](unityicon.png)
 
 Unity Ads fue requerido para la adición de un banner que se estará mostrando para adquirir revenue de este juego. El juego contara con una unica transacción opcional para remover el banner. Esta transacción costara 2 dolares, de los cuales la mitad se donará a fundaciones que ayuden a combatir el covid. 
-![Screenshot](unityiads.png)
+
+![Screenshot](unityads.png)
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
