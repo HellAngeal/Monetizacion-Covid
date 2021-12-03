@@ -15,22 +15,16 @@ Se necesita contar con un celular android con un sistema operativo minimo 4.4 y 
 
 ### Instalación 🔧
 
+Paso 1.- Vaya a su aplicación de Play Store.
 ![Screenshot](SS1.jpg)
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
+Paso 2.- Escriba el nombre del juego, Eliminate Fobid-21.
+![Screenshot](SS2.jpg)
 
-```
-Da un ejemplo
-```
+Paso 3.- Presione en instalar y espere a que se descargue y posteriormente se instale.
+![Screenshot](SS3.jpg)
 
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+Paso 4.- ¡Disfrute del juego!
 
 ## Ejecutando las pruebas ⚙️
 
