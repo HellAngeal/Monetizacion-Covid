@@ -49,15 +49,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.touchCount>0)
+        if (Input.touchCount > 0)
         {
+            Touch touch = Input.GetTouch(1);
+
             if (touch.phase == TouchPhase.Began)
             {
                 Shoot();
             }
         }
     }
-
     void Move()
     {
         //Mobile
@@ -232,3 +233,4 @@ public class PlayerController : MonoBehaviour
         explosion.transform.position = transform.position;
     }
 }
+
