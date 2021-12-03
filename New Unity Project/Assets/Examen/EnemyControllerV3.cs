@@ -6,9 +6,11 @@ public class EnemyControllerV3 : MonoBehaviour
 {
     GameObject scoreUITextGO;
     public GameObject PowerUpGO;
+    public GameObject UniqueAugmentGO;
     public GameObject explosionGO;
     int hp = 10;
     float speed;
+    int PupR;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +49,21 @@ public class EnemyControllerV3 : MonoBehaviour
         }
         else if ((collision.tag == "Player") || (collision.tag == "PlayerBullet") && hp == 0)
         {
+            PupR = Random.Range(0, 1);
+
             EnemyExplosion();
 
             scoreUITextGO.GetComponent<GameScore>().Score += 100;
 
-            SpawnPowerUp();
+            if (PupR == 0)
+            {
+                SpawnPowerUp();
+            }
+            else
+            {
+                SpawnUniqueAugment();
+            }
+
             Destroy(gameObject);
         }
     }
@@ -65,7 +77,7 @@ public class EnemyControllerV3 : MonoBehaviour
     void SpawnPowerUp()
     {
         int chance;
-        chance = Random.Range(1, 10);
+        chance = Random.Range(1, 6);
         if (chance==1)
         {
             GameObject PowerUp = Instantiate(PowerUpGO);
@@ -74,6 +86,12 @@ public class EnemyControllerV3 : MonoBehaviour
     }
     void SpawnUniqueAugment()
     {
-
+        int chance;
+        chance = Random.Range(1, 11);
+        if (chance == 1)
+        {
+            GameObject UniqueAugment = Instantiate(UniqueAugmentGO);
+            UniqueAugment.transform.position = transform.position;
+        }
     }
 }

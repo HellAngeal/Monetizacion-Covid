@@ -23,12 +23,34 @@ public class SlowProp : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        pC.speed = 1.5f;
+        if (collision.tag == "Player" && pC.UniqueLevel==0)
+        {
+            pC.speed = 1.5f;
+        }
+        else if (collision.tag == "Player" && pC.UniqueLevel == 1)
+        {
+            pC.speed = 2.25f;
+        }
+        else if(collision.tag == "Player" && pC.UniqueLevel == 2)
+        {
+            pC.speed = 3f;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        pC.speed = 3;
+        if (pC.UniqueLevel == 0)
+        {
+            pC.speed = 3;
+        }
+        else if( pC.UniqueLevel == 1)
+        {
+            pC.speed = 4.5f;
+        }
+        else
+        {
+            pC.speed = 6f;
+        }
     }
     void Behaviour()
     {

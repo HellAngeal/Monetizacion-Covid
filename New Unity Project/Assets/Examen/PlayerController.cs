@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     int lives;
 
     public int AttackLevel=1;
-    int UniqueLevel=0;
+    public int UniqueLevel=0;
     void Init()
     {
         lives = MaxLives;
@@ -164,7 +164,41 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.tag == "PowerUp")
         {
-            AttackLevel += 1;
+            if (AttackLevel == 1)
+            {
+                AttackLevel += 1;
+                Debug.Log(AttackLevel);
+            }
+            else if (AttackLevel == 2)
+            {
+                AttackLevel += 1;
+                Debug.Log(AttackLevel);
+            }
+            else if (AttackLevel == 3)
+            {
+                AttackLevel += 1;
+                Debug.Log(AttackLevel);
+            }
+            else if (AttackLevel == 4)
+            {
+                AttackLevel += 1;
+                Debug.Log(AttackLevel);
+            }
+        }
+        if (collision.tag == "UniqueAugment")
+        {
+            if (UniqueLevel == 0)
+            {
+                UniqueLevel += 1;
+                speed += 1.5f;
+                Debug.Log(UniqueLevel);
+            }
+            else if (UniqueLevel == 1)
+            {
+                UniqueLevel += 1;
+                speed += 1.5f;
+                Debug.Log(UniqueLevel);
+            }
         }
     }
     void PlayExplosion()

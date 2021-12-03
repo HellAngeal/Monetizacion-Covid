@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowSpawner : MonoBehaviour
+public class EnemySpawnerV2 : MonoBehaviour
 {
-    public GameObject SlowGO;
+    public GameObject EnemyGO;
 
-    float maxSpawnRate = 20f;
+    float maxSpawnRate = 12f;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("SpawnSlow", maxSpawnRate);
+            Invoke("SpawnEnemy", maxSpawnRate);
 
-        InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
+            InvokeRepeating("IncreaseSpawnRate", 0f, 30f);    
     }
 
     // Update is called once per frame
@@ -20,19 +20,19 @@ public class SlowSpawner : MonoBehaviour
     {
     }
 
-    void SpawnSlow()
+    void SpawnEnemy()
     {
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        GameObject Slow = Instantiate(SlowGO);
-        Slow.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        GameObject Enemy = Instantiate(EnemyGO);
+        Enemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
 
-        ScheduleNextSlowSpawn();
+        ScheduleNextEnemySpawn();
     }
 
-    void ScheduleNextSlowSpawn()
+    void ScheduleNextEnemySpawn()
     {
         float spawnInSeconds;
 
@@ -45,7 +45,7 @@ public class SlowSpawner : MonoBehaviour
             spawnInSeconds = 1f;
         }
 
-        Invoke("SpawnSlow", spawnInSeconds);
+        Invoke("SpawnEnemy", spawnInSeconds);
     }
 
     void IncreaseSpawnRate()

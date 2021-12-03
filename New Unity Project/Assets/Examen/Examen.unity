@@ -373,7 +373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7097802707153904228, guid: 6080f936a6093284994b8d48287c8439, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.654
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7097802707153904228, guid: 6080f936a6093284994b8d48287c8439, type: 3}
       propertyPath: m_LocalPosition.y
@@ -737,6 +737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PinkPlanetGO
       objectReference: {fileID: 0}
+    - target: {fileID: 9149761980110432300, guid: c575b0b8381eeda458777153c23115d5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c575b0b8381eeda458777153c23115d5, type: 3}
 --- !u!1 &1192830224
@@ -750,6 +754,9 @@ GameObject:
   - component: {fileID: 1192830227}
   - component: {fileID: 1192830225}
   - component: {fileID: 1192830226}
+  - component: {fileID: 1192830230}
+  - component: {fileID: 1192830229}
+  - component: {fileID: 1192830228}
   m_Layer: 0
   m_Name: EnemySpawnerGO
   m_TagString: Untagged
@@ -769,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb83f8748aea7ec439601703d7af0dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyGO: {fileID: 1012588599468837761, guid: 2666816e86844ec44bd10a349828c3de, type: 3}
+  EnemyGO: {fileID: 1012588599468837761, guid: c2f18d659c760344ebea394cbd6dca2a, type: 3}
 --- !u!114 &1192830226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlowGO: {fileID: 3541421608409973474, guid: 9c6a9e65d5a1ea4458857eac8d675684, type: 3}
-  maxSpawnRate: 10
 --- !u!4 &1192830227
 Transform:
   m_ObjectHideFlags: 0
@@ -798,6 +804,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1192830228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192830224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326498d9e48547a4e8b3d08c9708093e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1192830229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192830224}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ac0618dc06615499825e53e3ac1f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyGO: {fileID: 1012588599468837761, guid: b1f6aa5e114271b44ae475e85efdb5e0, type: 3}
+--- !u!114 &1192830230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192830224}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32731362790f5064cb4d926431d4ae60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyGO: {fileID: 1012588599468837761, guid: 2666816e86844ec44bd10a349828c3de, type: 3}
 --- !u!1 &1231512481
 GameObject:
   m_ObjectHideFlags: 0
