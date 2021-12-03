@@ -1,4 +1,4 @@
-# Eliminate Fobid-21
+# Eliminate Fobid-21 🦠
 
 Este proyecto es un juego estilo Shoot ´em up/Bullet hell que se realizo con la finalidad de conscientizar a la poblacion hispanohablante acerca de las vacunas contra la situacion que estamos enfrentando actualmente. Se intenta mostrar de forma interactiva y caricaturesca los beneficios que una vacuna puede tener para que las personas tengan menos miedo y puedan asi subir sus probabilidades de no verse altamente afectados por la pandemia. Además se busca recaudar un poco del profit para donarlo a organizaciones que ayuden a combatir el la situación o apoyen a familias afectadas por la misma.
 
