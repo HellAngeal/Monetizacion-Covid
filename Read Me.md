@@ -1,6 +1,6 @@
-# Título del Proyecto
+# Eliminate Fobid-21
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Este proyecto es un juego estilo Shoot ´em up/Bullet hell que se realizo con la finalidad de conscientizar a la poblacion hispanohablante acerca de las vacunas contra la situacion que estamos enfrentando actualmente. Se intenta mostrar de forma interactiva y caricaturesca los beneficios que una vacuna puede tener para que las personas tengan menos miedo y puedan asi subir sus probabilidades de no verse altamente afectados por la pandemia. Además se busca recaudar un poco del profit para donarlo a organizaciones que ayuden a combatir el la situación o apoyen a familias afectadas por la misma.
 
 ## Comenzando 🚀
 
@@ -59,6 +59,10 @@ Se utilizo Unity como motor de juego para la creación de los scripts e incorpor
 Unity Ads fue requerido para la adición de un banner que se estará mostrando para adquirir revenue de este juego. El juego contara con una unica transacción opcional para remover el banner. Esta transacción costara 2 dolares, de los cuales la mitad se donará a fundaciones que ayuden a combatir el covid. 
 
 ![Screenshot](unityads.png)
+
+Por ultimo se utilizo Marmoset Hexels para realizar todo el apartado artistico (pixelart).
+
+![Screenshot](marmoset.png)
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
