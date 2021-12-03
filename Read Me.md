@@ -18,13 +18,14 @@ Se necesita contar con un celular android con un sistema operativo minimo 4.4 y 
 Paso 1.- Vaya a su aplicación de Play Store.
 ![Screenshot](SS1.jpg)
 
-Paso 2.- Escriba el nombre del juego, Eliminate Fobid-21.
+Paso 2.- Escriba el nombre del juego, Eliminate Fobid-21. Busque el icono del juego y presionelo.
 ![Screenshot](SS2.jpg)
 
 Paso 3.- Presione en instalar y espere a que se descargue y posteriormente se instale.
 ![Screenshot](SS3.jpg)
 
 Paso 4.- ¡Disfrute del juego!
+![Screenshot](SS4.jpg)
 
 ## Ejecutando las pruebas ⚙️
 
