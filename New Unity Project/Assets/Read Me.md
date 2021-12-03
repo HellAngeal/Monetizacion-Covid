@@ -11,11 +11,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
+Se necesita contar con un celular android con un sistema operativo minimo 4.4 y maximo de 11.0, además de contar con el espacio de memoria suficiente.
 
 ### Instalación 🔧
 
