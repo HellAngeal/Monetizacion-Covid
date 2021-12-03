@@ -2,13 +2,6 @@
 
 Este proyecto es un juego estilo Shoot ´em up/Bullet hell que se realizo con la finalidad de conscientizar a la poblacion hispanohablante acerca de las vacunas contra la situacion que estamos enfrentando actualmente. Se intenta mostrar de forma interactiva y caricaturesca los beneficios que una vacuna puede tener para que las personas tengan menos miedo y puedan asi subir sus probabilidades de no verse altamente afectados por la pandemia. Además se busca recaudar un poco del profit para donarlo a organizaciones que ayuden a combatir el la situación o apoyen a familias afectadas por la misma.
 
-## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
-
 ### Pre-requisitos 📋
 
 Se necesita contar con un celular android con un sistema operativo minimo 4.4 y maximo de 11.0, además de contar con el espacio de memoria suficiente.
@@ -39,16 +32,11 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+* **Guillermo Drew Barragán** - *Absolutamente todo* - [HellAngeal](https://github.com/HellAngeal)
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia HellAngeal.
 
 ## Como se realizo ⚙️
 
@@ -63,14 +51,14 @@ Unity Ads fue requerido para la adición de un banner que se estará mostrando p
 Por ultimo se utilizo Marmoset Hexels para realizar todo el apartado artistico (pixelart).
 
 ![Screenshot](marmoset.png)
+
+## Gameplay 🚀
+
+Shoot ´em up/Bullet hell donde se utilizará el acelerometro para mover nuestra vacuna y se podra utilizar toda la pantalla para tocar y realizar un disparo. Los enemigos apareceran desde arriba y vendra de forma decendente disparandote, tendras que esquivar tanto las balas como a los enemigos. La dificultad del juego aumentará conforme más tiempo pase y más puntos tengas, pero también los enemigos tendrán una posibilidad de tirarte dos tipos de mejoras para ayudarte a progresar de manera más sencilla. La mejora de disparo tendra forma de un glóbulo blanco y hara que dispares más balas y la mejora única sera distinta para cada tipo de vacuna y mejorara algo en específico para esa vacuna. En el mvp creado solo se tendrá una vacuna y su mejora única es el aumento de velocidad base. Los niveles de ataque son 5 contando el inicial y de la mejora única serán solo 2 y comenzará en 0. Cuando se reciba daño ambos niveles seren reseteados a sus valores iniciales y además cuando se reciba daño 5 veces el juego terminará. 
+
 ## Expresiones de Gratitud 🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
-
+*Gracias al profe por hacer que me desvele haciendo el proyecto, que si me gusto y seguiré trabajando en vacaciones.
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con odio hacia todos por [HellAngeal](https://github.com/HellAngeal) 😊
