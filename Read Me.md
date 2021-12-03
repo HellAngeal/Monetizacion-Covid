@@ -12,6 +12,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 ### Pre-requisitos 📋
 
 Se necesita contar con un celular android con un sistema operativo minimo 4.4 y maximo de 11.0, además de contar con el espacio de memoria suficiente.
+![Screenshot](androidicon.png)
 
 ### Instalación 🔧
 
