@@ -25,6 +25,7 @@ Paso 3.- Presione en instalar y espere a que se descargue y posteriormente se in
 ![Screenshot](SS3.jpg)
 
 Paso 4.- ¡Disfrute del juego!
+
 ![Screenshot](SS4.jpg)
 
 ## Ejecutando las pruebas ⚙️
